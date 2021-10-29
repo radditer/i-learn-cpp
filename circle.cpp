@@ -2,8 +2,11 @@
 
 int main()
 {
-  for (int i = 0; i < 999; i++)
+  int i = 0;
+  while (i <= 999)
   {
-    std::cout testing
+    std::cout << "testing\n";
+    std::cout << i << "\n";
+    i++;
   }
 }
