@@ -1,7 +1,8 @@
 #include <iostream>
 
-int a, b, y;
-long f(int i, int x)
+int a, b;
+long long y;
+long long f(int i, int x)
 {
   if (i == 0)
   {
