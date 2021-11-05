@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int length, lengthin = 0, z;
-double temp;
+int length;
 std::vector<double> list;
 
 void recall()
@@ -17,6 +16,9 @@ void recall()
 
 int main()
 {
+  int lengthin = 0, n, o;
+  double z, temp;
+  //z is input number into the vector
   std::cout << "What is the length of the list to be sorted?\n";
   std::cin >> length;
 
@@ -27,5 +29,20 @@ int main()
     list.push_back(z);
     lengthin++;
   }
+
+  for (int n = 0; n < length; n++)
+  {
+    for (int o = n + 1; o < length; o++)
+    {
+      if (list[o] < list[n])
+      {
+        temp = list[n];
+        list[n] = list[o];
+        list[o] = temp;
+      }
+      recall();
+    }
+  }
+  std::cout << "The sorted list is:\n";
   recall();
 }
